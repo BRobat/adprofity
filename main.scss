@@ -9,9 +9,35 @@
  $lightgrey: rgb(220, 220, 220);
  $yellow: rgb(250, 200, 70);
 
-
 body {
     background-color: grey;
+    padding: 0px;
+    margin: 0px;
+}
+
+img {
+    margin: auto;
+    padding: auto;
+}
+
+
+.header {
+    margin: 0;
+    background-color: $yellow;
+}
+
+.head-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.head-content1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.head-content2 {
+    display: flex;
 }
 
 .container {
@@ -20,22 +46,23 @@ body {
 
     background-color: white;
     border-style: none;
-    border-radius: 10px;
+    
 }
 
 .container-cv {
-    width: 660px;
-
-    display: grid;
-    grid-template-columns: 280px 380px;
+    margin: auto;
+    padding: 0px;
+    box-shadow: 5px 5px 14px black;
 }
 
 .container-quiz {
     margin: auto;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
 
     max-width: 400px;
+    border-radius: 10px;
 }
 
 
@@ -59,7 +86,28 @@ body {
 }
 
 .text-title{
-    
+    margin: auto;
+    color: $grey;
+    font-size: 52px;
+    text-align: center;
+}
+
+.text-subtitle {
+    padding: 8px;
+    color: $yellow;
+    background-color: $grey;
+    text-align: center;
+}
+
+.text-head-section {
+    font-size: 24px;
+    color: $grey;
+    text-align: center;
+}
+
+.text-head {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .text-skill{
@@ -67,11 +115,108 @@ body {
 }
 
 .img-avatar {
+    margin: auto;
+    padding: 5px;
+    background-color: white;
     border-radius: 50%;
+    border-width: 12px;
+    border-color: $white;
 }
 
+.border {
+    margin: auto;
+    padding: 12px;
 
+    width: 238px;
+    height: 238px;
+
+    border-radius: 50%;
+    border-width: 12px;
+    border-color: $yellow; 
+}
 
 .skill {
     display: flex;
+}
+
+
+// stuff dependant of screen size
+
+
+@media (min-width: 650px) {
+    .container-cv {
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 0px;
+        max-width: 800px;
+    
+        display: grid;
+        grid-template-columns: 280px auto;
+    }
+
+    .header {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .content {
+        grid-column: 2;
+        grid-row: 1;
+        max-width: 380px;
+    }
+}
+
+
+.grey-left {
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: $grey;
+    
+    background-repeat: no-repeat;
+    background-position: 50px;
+    background-size: 30px;
+    width: 70px;
+    height: 30px;
+
+    border-width: 15px;
+    border-color: $grey;
+    
+}
+
+.grey-box {
+
+}
+
+.letter {
+    background-image: url(./assets/mail-letter-svgrepo-com.svg);
+}
+
+.phone {
+    background-image: url(./assets/telephone-svgrepo-com.svg);
+}
+
+.house {
+    background-image: url(./assets/house-svgrepo-com.svg);
+}
+
+.world {
+    background-image: url(./assets/world-grid-svgrepo-com.svg);
+}
+
+.plane {
+    background-image: url(./assets/airplane-svgrepo-com.svg);
+}
+
+.book {
+    background-image: url(./assets/book-svgrepo-com.svg);
+}
+
+.music {
+    background-image: url(./assets/music-quaver-draw-svgrepo-com.svg)
+}
+
+.pen {
+    background-image: url(./assets/mechanical-pen-svgrepo-com.svg);
 }

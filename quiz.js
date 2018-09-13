@@ -85,7 +85,7 @@ function deinitializeQuiz() {
         container.style.display = "none"; 
         questionNumber.style.display = "none";
 
-        cv.style.display = "block";
+        cv.style.display = "grid";
 
     } else {
         alert("Brak dostępu.");
