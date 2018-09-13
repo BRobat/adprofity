@@ -25,16 +25,17 @@ let questions = [
     }
 ]
 
-let winner = false;
 let points = 0;
 let selectedQuestion = 0;
 
-let body = document.getElementsByTagName("body")[0];
+let container = document.getElementById("question-container");
 let questionLbl = document.getElementById("question-lbl");
 let answer1 = document.getElementById("answer1");
 let answer2 = document.getElementById("answer2");
+let questionNumber = document.getElementById("question-number");
 
 let cv = document.getElementById("cv");
+cv.style.display = "none";
 
 answer1.onclick = function() { answer(0) };
 answer2.onclick = function() { answer(1) };
@@ -45,14 +46,8 @@ initializeQuiz()
 
 function initializeQuiz() {
     // creates buttons and stuff.
-    winner = false
     points = 0
     selectedQuestion = 0
-
-    // create buttons and stuff
-    questionLbl.style.display = "block";
-    answer1.style.display = "block";
-    answer2.style.display = "block";
 
     // load first question
     loadQuestion();
@@ -64,10 +59,11 @@ function loadQuestion() {
         questionLbl.innerHTML = questions[selectedQuestion].question;
         answer1.innerHTML = questions[selectedQuestion].answers[0];
         answer2.innerHTML = questions[selectedQuestion].answers[1];
+        let q = selectedQuestion + 1 // used only here
+        questionNumber.innerHTML = "Pytanie " + q + "/3"
     } else {
         deinitializeQuiz();
     }
-    
 }
 
 function answer(i) {
@@ -77,7 +73,7 @@ function answer(i) {
     } else {
     }
     selectedQuestion += 1;
-        loadQuestion();
+    loadQuestion();
 }
 
 function deinitializeQuiz() {
@@ -86,10 +82,13 @@ function deinitializeQuiz() {
         questionLbl.style.display = "none";
         answer1.style.display = "none";
         answer2.style.display = "none";
-        cv.style.display = "blcok";
+        container.style.display = "none"; 
+        questionNumber.style.display = "none";
+
+        cv.style.display = "block";
 
     } else {
-        alert("need another try?");
+        alert("Brak dostępu.");
         initializeQuiz();
     }
 }

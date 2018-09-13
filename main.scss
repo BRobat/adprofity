@@ -4,6 +4,12 @@
     to compile automatically
  */
 
+ $white: white;
+ $grey: rgb(55, 56, 57);
+ $lightgrey: rgb(220, 220, 220);
+ $yellow: rgb(250, 200, 70);
+
+
 body {
     background-color: grey;
 }
@@ -15,4 +21,57 @@ body {
     background-color: white;
     border-style: none;
     border-radius: 10px;
+}
+
+.container-cv {
+    width: 660px;
+
+    display: grid;
+    grid-template-columns: 280px 380px;
+}
+
+.container-quiz {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    max-width: 400px;
+}
+
+
+.btn {
+    margin-top: 10px;
+    padding: 10px 20px 10px 20px;
+
+    border-radius: 20px;
+    border-style: none;
+
+    font-size: 18px;
+}
+
+.btn-answer {
+    background-color: purple;
+    color: white;
+}
+
+.text {
+    font-family: 'Lato', sans-serif; 
+}
+
+.text-title{
+    
+}
+
+.text-skill{
+    margin:auto;
+}
+
+.img-avatar {
+    border-radius: 50%;
+}
+
+
+
+.skill {
+    display: flex;
 }
