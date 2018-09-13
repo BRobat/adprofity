@@ -4,33 +4,9 @@
     to compile automatically
  */
 body {
-  background-color: grey;
+  background-color: gainsboro;
   padding: 0px;
   margin: 0px;
-}
-
-img {
-  margin: auto;
-  padding: auto;
-}
-
-.header {
-  margin: 0;
-  background-color: #fac846;
-}
-
-.head-section {
-  display: flex;
-  flex-direction: column;
-}
-
-.head-content1 {
-  display: flex;
-  flex-direction: row;
-}
-
-.head-content2 {
-  display: flex;
 }
 
 .container {
@@ -55,6 +31,59 @@ img {
   border-radius: 10px;
 }
 
+.header {
+  margin: 0;
+  background-color: #fac846;
+}
+
+.head-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.head-section2 {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.head-content1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.head-content2 {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.head-footer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.content {
+  margin-left: 25px;
+  margin-top: 50px;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.content-skills {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
 .btn {
   margin-top: 10px;
   padding: 10px 20px 10px 20px;
@@ -70,6 +99,7 @@ img {
 
 .text {
   font-family: "Lato", sans-serif;
+  color: #373839;
 }
 
 .text-title {
@@ -97,8 +127,28 @@ img {
   margin-bottom: auto;
 }
 
+.text-footer {
+  font-size: 10px;
+  margin: 10px;
+}
+
 .text-skill {
   margin: auto;
+}
+
+.text-content-section {
+  padding: 10px;
+  color: white;
+  background-color: #373839;
+  width: 100%;
+}
+
+.text-content {
+  margin-right: 10px;
+}
+
+.text-percentage {
+  text-align: center;
 }
 
 .img-avatar {
@@ -124,6 +174,17 @@ img {
   display: flex;
 }
 
+.circle {
+  margin: 10px;
+  padding: auto;
+  height: 50px;
+  width: 50px;
+  border-width: 8px;
+  border-style: solid;
+  border-radius: 50%;
+  border-color: #fac846;
+}
+
 @media (min-width: 650px) {
   .container-cv {
     margin: auto;
@@ -143,7 +204,6 @@ img {
   .content {
     grid-column: 2;
     grid-row: 1;
-    max-width: 380px;
   }
 }
 .grey-left {
@@ -156,8 +216,36 @@ img {
   background-size: 30px;
   width: 70px;
   height: 30px;
-  border-width: 15px;
-  border-color: #373839;
+}
+
+.grey-box {
+  margin-right: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #373839;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+.icon {
+  margin-right: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
+  width: 75px;
+  height: 75px;
+}
+
+.line-n-dot {
+  background-color: #fac846;
+  margin-right: 20px;
+  margin-left: 25px;
+  width: 10px;
+  height: 180px;
+  background-size: auto;
 }
 
 .letter {
@@ -190,6 +278,34 @@ img {
 
 .pen {
   background-image: url(./assets/mechanical-pen-svgrepo-com.svg);
+}
+
+.client {
+  background-image: url(./assets/client-profile-svgrepo-com.svg);
+}
+
+.experience {
+  background-image: url(./assets/computer-monitor-plain-svgrepo-com.svg);
+}
+
+.education {
+  background-image: url(./assets/college-graduation-svgrepo-com.svg);
+}
+
+.skills {
+  background-image: url(./assets/mechanical-gears-svgrepo-com.svg);
+}
+
+.skill1 {
+  grid-column: 1;
+}
+
+.skill2 {
+  grid-column: 2;
+}
+
+.skill3 {
+  grid-column: 3;
 }
 
 /*# sourceMappingURL=main.css.map */
